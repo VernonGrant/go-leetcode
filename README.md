@@ -1,2 +1,3 @@
-# go-leetcode
+# GoLang LeetCode Problems
+
 LeetCode problems in Golang
