@@ -49,7 +49,51 @@ func maxVowels(s string, k int) int {
 	return mx
 }
 
+// 3: Given a string s, find the length of the longest substring without
+// repeating characters.
+//
+// The idea was to expand the window to the right until a character is found
+// that's withing the current window. At that point we move the left side of the
+// window until there's no duplicates matching this character. If there's no
+// duplicate we check if the max value needs to be updated.
+func lengthOfLongestSubstring(s string) int {
+	mx := 0
+	r := []rune(s)
+	l := len(r)
+
+	if l == 1 {
+		return 1
+	}
+
+	contains := func(r []rune, c rune) bool {
+		for _, sym := range r {
+			if sym == c {
+				return true
+			}
+		}
+		return false
+	}
+
+	for ws, we := 0, 1; we < l; {
+		if contains(r[ws:we], r[we]) {
+			ws++
+		} else {
+			if we-ws+1 > mx {
+				mx = we - ws + 1
+			}
+			we++
+		}
+	}
+
+	return mx
+}
+
 func main() {
+	// Longest Substring
+	fmt.Printf("The lpongest substring is: %d\n", lengthOfLongestSubstring("abcabcbb")) // 3
+	fmt.Printf("The longest substring is: %d\n", lengthOfLongestSubstring("bbbbb"))     // 1
+	fmt.Printf("The longest substring is: %d\n", lengthOfLongestSubstring("pwwkew"))    // 3
+
 	// Max Vowels
 	fmt.Printf("Total Vowels: %d\n", maxVowels("weallloveyou", 7)) // 4
 	fmt.Printf("Total Vowels: %d\n", maxVowels("abciiidef", 3))    // 3
