@@ -113,6 +113,7 @@ func lengthOfLongestSubstring(s string) int {
 // -231 <= x <= 231 - 1
 func isPalindrome(x int) bool {
 
+	return false
 }
 
 // 14: Write a function to find the longest common prefix string amongst an
@@ -131,6 +132,7 @@ func isPalindrome(x int) bool {
 // strs[i] consists of only lowercase English letters.
 func longestCommonPrefix(strs []string) string {
 
+	return ""
 }
 
 // 20: Given a string s containing just the characters '(', ')', '{', '}', '[' and
@@ -155,6 +157,7 @@ func longestCommonPrefix(strs []string) string {
 // Output: false
 func isValidParentheses(s string) bool {
 
+	return false
 }
 
 ////////////////////////
@@ -441,6 +444,8 @@ type ListNode struct {
 // Output: [8,9,9,9,0,0,0,1]
 
 func addTwoNumbersLists(l1 *ListNode, l2 *ListNode) *ListNode {
+	var temp ListNode;
+	return &temp
 }
 
 // 21: You are given the heads of two sorted linked lists list1 and list2.
@@ -467,57 +472,10 @@ func addTwoNumbersLists(l1 *ListNode, l2 *ListNode) *ListNode {
 // -100 <= Node.val <= 100
 // Both list1 and list2 are sorted in non-decreasing order.
 func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
+	var temp ListNode;
+	return &temp
 }
 
-// TODO: Arrays can be used as dictionary keys?
-// TODO: We can use maps and arrays to store complements and group things for checking.
-// TODO: Take time to think of ways to solve problems using effective comparisons.
-
 func main() {
-	// Top Frequent
-	fmt.Printf("The top frequencies are: %v\n", topKFrequent([]int{1, 1, 1, 2, 2, 3}, 2)) // [1, 2]
-	fmt.Printf("The top frequencies are: %v\n", topKFrequent([]int{1}, 1)) // [1]
-	fmt.Printf("The top frequencies are: %v\n", topKFrequent([]int{5, 5, 5, 1, 2, 1, 2, 2}, 3)) // [5,2,1]
-	fmt.Printf("The top frequencies are: %v\n", topKFrequent([]int{5, 5, 5, 5}, 1)) // [5]
-	fmt.Println("---")
-
-	// Group Anagrams
-	fmt.Printf("Anagram groups are: %v\n", groupAnagrams([]string{"", "b"})) // [["b"], [""]]
-	fmt.Printf("Anagram groups are: %v\n", groupAnagrams([]string{"ac", "c"})) // [["ac","c"]]
-	fmt.Printf("Anagram groups are: %v\n", groupAnagrams([]string{"eat", "tea", "tan", "ate", "nat", "bat"})) // [["bat"],["nat","tan"],["ate","eat","tea"]]
-	fmt.Printf("Anagram groups are: %v\n", groupAnagrams([]string{""})) // [[""]]
-	fmt.Printf("Anagram groups are: %v\n", groupAnagrams([]string{"a"})) // [["a"]]
-	fmt.Println("---")
-
-	// Two Sum
-	fmt.Printf("The two sum is %v\n", twoSum([]int{2, 7, 11, 15}, 9)) // [0,1]
-	fmt.Printf("The two sum is %v\n", twoSum([]int{3, 2, 4}, 6)) // [1,2]
-	fmt.Printf("The two sum is %v\n", twoSum([]int{3, 3}, 6)) // [0,1]
-	fmt.Println("---")
-
-	// Valid Anagram
-	fmt.Printf("Is Anagram: %t\n", isAnagram("aacc", "ccac")) // false
-	fmt.Printf("Is Anagram: %t\n", isAnagram("anagram", "nagaram")) // true
-	fmt.Printf("Is Anagram: %t\n", isAnagram("rat", "car")) // false
-	fmt.Printf("Is Anagram: %t\n", isAnagram("anagram", "nagarammm")) // true
-	fmt.Println("---")
-
-	// Contains duplicate
-	fmt.Printf("Contains duplicate: %t\n", containsDuplicate([]int{1, 2, 3, 1})) // true
-	fmt.Printf("Contains duplicate: %t\n", containsDuplicate([]int{1, 2, 3, 4})) // false
-	fmt.Printf("Contains duplicate: %t\n", containsDuplicate([]int{1, 1, 1, 3, 3, 4, 3, 2, 4, 2})) // true
-	fmt.Println("---")
-
-	// Longest Substring
-	fmt.Printf("The longest substring is: %d\n", lengthOfLongestSubstring("abcabcbb")) // 3
-	fmt.Printf("The longest substring is: %d\n", lengthOfLongestSubstring("bbbbb")) // 1
-	fmt.Printf("The longest substring is: %d\n", lengthOfLongestSubstring("pwwkew")) // 3
-	fmt.Println("---")
-
-	// Max Vowels
-	fmt.Printf("Total Vowels: %d\n", maxVowels("weallloveyou", 7)) // 4
-	fmt.Printf("Total Vowels: %d\n", maxVowels("abciiidef", 3)) // 3
-	fmt.Printf("Total Vowels: %d\n", maxVowels("aeiou", 2)) // 2
-	fmt.Printf("Total Vowels: %d\n", maxVowels("leetcode", 3)) // 2
-	fmt.Println("---")
+	fmt.Println("Hello from main.")
 }
